@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'BabilPro',
+      title: 'babilpro',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -28,11 +28,11 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("BabilPro"),
+        title: const Text("babilpro"),
       ),
       body: const Center(
         child: Text(
-          "BabilPro Çalışıyor!",
+          "babilpro Çalışıyor!",
           style: TextStyle(fontSize: 22),
         ),
       ),
