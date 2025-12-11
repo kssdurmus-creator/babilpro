@@ -5,10 +5,9 @@
 
     <application
         android:label="BabilPro"
+        android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher"
-        android:roundIcon="@mipmap/ic_launcher"
-        android:usesCleartextTraffic="true"
-        android:theme="@style/LaunchTheme">
+        android:usesCleartextTraffic="true">
 
         <activity
             android:name=".MainActivity"
@@ -16,14 +15,18 @@
             android:launchMode="singleTop"
             android:theme="@style/LaunchTheme"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+
         </activity>
 
-        <meta-data android:name="io.flutter.embedding.android.NormalTheme"
+        <meta-data
+            android:name="io.flutter.embedding.android.NormalTheme"
             android:resource="@style/NormalTheme" />
+
     </application>
 
 </manifest>
