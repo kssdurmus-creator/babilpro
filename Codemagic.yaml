@@ -1,0 +1,44 @@
+workflows:
+  android-apk-release:
+    name: Android APK Release
+    max_build_duration: 60
+    instance_type: linux_x2
+
+    environment:
+      flutter: stable
+      java: 17
+
+    triggering:
+      events:
+        - push
+      branch_patterns:
+        - pattern: main
+          include: true
+
+    scripts:
+      - name: Flutter doctor
+        script: |
+          flutter doctor -v
+
+      - name: Get dependencies
+        script: |
+          flutter pub get
+
+      - name: Clean build
+        script: |
+          flutter clean
+
+      - name: Build APK (release)
+        script: |
+          flutter build apk --release
+
+    artifacts:
+      - build/app/outputs/flutter-apk/app-release.apk
+
+    publishing:
+      email:
+        recipients:
+          - yourmail@example.com
+        notify:
+          success: true
+          failure: true
