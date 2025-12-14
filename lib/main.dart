@@ -16,24 +16,24 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomePage(),
+      home: const AnaSayfa(),
     );
   }
 }
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class AnaSayfa extends StatelessWidget {
+  const AnaSayfa({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("babilpro"),
+        title: const Text('babilpro'),
       ),
       body: const Center(
         child: Text(
-          "babilpro Çalışıyor!",
-          style: TextStyle(fontSize: 22),
+          'Uygulama çalışıyor',
+          style: TextStyle(fontSize: 20),
         ),
       ),
     );
